@@ -1,0 +1,121 @@
+/** Regular */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 400;
+    src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+}
+
+/** Semibold */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 600;
+    src: url("https://sf.abarba.me/SF-UI-Display-Semibold.otf");
+}
+
+/** Thin */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 300;
+    src: url("https://sf.abarba.me/SF-UI-Display-Thin.otf");
+}
+
+/** Bold */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 700;
+    src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+}
+
+* {
+    font-family: SF Display;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background-image: url();
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.contjam {
+    position: absolute;
+    width: 100%;
+    top: 50vh;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.jam {
+    position: relative;
+    font-size: 100px;
+    font-weight: 300;
+}
+
+.tanggal {
+    position: relative;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.ucapan {
+    position: relative;
+    color: #000000;
+    font-size: 20px;
+    margin-top: 50px;
+    background: #EAEAEA90;
+    left: calc(50% - 220px - 20px);
+    width: 440px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    transition: all ease 0.3s;
+}
+
+.ucapan:active {
+    transform: scale(1.02);
+}
+
+.ucapan:hover,
+.ucapan *:hover {
+    cursor: pointer;
+}
+
+.ucapan::before {
+    content: 'ketuk untuk mencari';
+    font-size: 12pt;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    left: 50%;
+    bottom: -80px;
+    background: #FFFFFFB0;
+    position: absolute;
+    z-index: 99;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all ease 0.3s;
+    pointer-events: none;
+}
+
+.ucapan:hover::before {
+    bottom: -60px;
+    opacity: 1;
+}
